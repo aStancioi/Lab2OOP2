@@ -12,19 +12,16 @@ Complex::Complex(double a, double b)
 }
 
 double Complex::getreal() const
-//returns the real part of the number
 {
 	return real;
 }
 
 double Complex::getimg() const
-//returns the imaginary part of the number
 {
 	return imaginar;
 }
 
 void Complex::show_compl()
-//returns a complex number
 {
 	double r, i;
 	r = this->getreal();
@@ -38,24 +35,26 @@ void Complex::show_compl()
 			cout << r << " + " << i << "i";
 }
 
-void Complex::show_exp()
-//displays the exponential form of a complex number
+string Complex::show_exp()
 {
-	int t;
+	float t;
+	string s;
 	double r, i;
 	r = this->getreal();
 	i = this->getimg();
 	t = atan2(i, r);
-	cout << r << " * e^" << "(" << t << " * i)";
+	s = to_string(r) + " * e^" + "(" + to_string(t) + " * i)";
+	return s;
 }
 
-void Complex::compute_polar()
-//displays the polar form of a complex number
+string Complex::compute_polar()
 {
-	int t;
+	float t;
+	string s;
 	double r, i;
 	r = this->getreal();
 	i = this->getimg();
 	t = atan2(i, r);
-	cout << "z = " << r << " * (cos" << t << " + isin" << t << ")";
+	s = "z = " + to_string(r) + " * (cos" + to_string(t) + " + isin" + to_string(t) + ")";
+	return s;
 }
