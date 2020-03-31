@@ -56,7 +56,7 @@ int main()
 		s = s.add(vector[i]);
 	}
 
-	cout << "\nSumme: " << s.getreal()<< " " << s.getimg();
+	cout << "\nSumme: " << s.show_compl();
 	
 	assert(s.getreal() == 15);
 	assert(s.getimg() == 40);
